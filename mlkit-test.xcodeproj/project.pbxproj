@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E0437DC215BC0A08F64BAD13 /* Pods_mlkit_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA3991A795AE71EFACD1DA7 /* Pods_mlkit_test.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		2D376E8C2DBF2A64007662C5 /* mlkit-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mlkit-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D003E3CAB330F7176D78344 /* Pods-mlkit-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mlkit-test.release.xcconfig"; path = "Target Support Files/Pods-mlkit-test/Pods-mlkit-test.release.xcconfig"; sourceTree = "<group>"; };
+		ADA3991A795AE71EFACD1DA7 /* Pods_mlkit_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mlkit_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDA4A9C1F2AB144510AEB79A /* Pods-mlkit-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mlkit-test.debug.xcconfig"; path = "Target Support Files/Pods-mlkit-test/Pods-mlkit-test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0437DC215BC0A08F64BAD13 /* Pods_mlkit_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +55,8 @@
 			children = (
 				2D376E8E2DBF2A64007662C5 /* mlkit-test */,
 				2D376E8D2DBF2A64007662C5 /* Products */,
+				74B29D86F7ABC4C782695E5B /* Pods */,
+				DDB0B8F44FE4067D8C630634 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +68,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		74B29D86F7ABC4C782695E5B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BDA4A9C1F2AB144510AEB79A /* Pods-mlkit-test.debug.xcconfig */,
+				7D003E3CAB330F7176D78344 /* Pods-mlkit-test.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DDB0B8F44FE4067D8C630634 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ADA3991A795AE71EFACD1DA7 /* Pods_mlkit_test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,9 +92,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D376E9F2DBF2A65007662C5 /* Build configuration list for PBXNativeTarget "mlkit-test" */;
 			buildPhases = (
+				AD58D8FD48EAEE7EEB4D4A8A /* [CP] Check Pods Manifest.lock */,
 				2D376E882DBF2A64007662C5 /* Sources */,
 				2D376E892DBF2A64007662C5 /* Frameworks */,
 				2D376E8A2DBF2A64007662C5 /* Resources */,
+				DA774C65582258F732A3BA91 /* [CP] Embed Pods Frameworks */,
+				4BA8036E6B179C2823A8EEC5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -77,8 +107,6 @@
 				2D376E8E2DBF2A64007662C5 /* mlkit-test */,
 			);
 			name = "mlkit-test";
-			packageProductDependencies = (
-			);
 			productName = "mlkit-test";
 			productReference = 2D376E8C2DBF2A64007662C5 /* mlkit-test.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +155,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4BA8036E6B179C2823A8EEC5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mlkit-test/Pods-mlkit-test-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mlkit-test/Pods-mlkit-test-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mlkit-test/Pods-mlkit-test-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD58D8FD48EAEE7EEB4D4A8A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mlkit-test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA774C65582258F732A3BA91 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mlkit-test/Pods-mlkit-test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mlkit-test/Pods-mlkit-test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mlkit-test/Pods-mlkit-test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2D376E882DBF2A64007662C5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,12 +235,14 @@
 /* Begin XCBuildConfiguration section */
 		2D376EA02DBF2A65007662C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDA4A9C1F2AB144510AEB79A /* Pods-mlkit-test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J93376GTPL;
+				DEVELOPMENT_TEAM = TK22U6U79B;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "mlkit-test/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -153,6 +250,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -168,12 +266,14 @@
 		};
 		2D376EA12DBF2A65007662C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D003E3CAB330F7176D78344 /* Pods-mlkit-test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J93376GTPL;
+				DEVELOPMENT_TEAM = TK22U6U79B;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "mlkit-test/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -181,6 +281,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
