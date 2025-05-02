@@ -3,7 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSCameraUsageDescription</key>
-	<string>Used for face detection</string>
+	<string>We need camera access to detect your face for liveness verification.</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>We need photo library access to save your verification photo.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
