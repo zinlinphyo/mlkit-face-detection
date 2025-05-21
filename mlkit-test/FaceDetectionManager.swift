@@ -19,7 +19,7 @@ protocol FaceDetectionListener: AnyObject {
     func onActionCompleted(_ message: String)
     func onActionWrong(_ message: String)
     func onDetectActionCompleted(_ message: String)
-    func onSuccessUpload(_ message: String)
+    func onSuccessUpload(_ message: String, image: UIImage?) // Add image parameter
     func onFailUpload(_ message: String)
 }
 
@@ -42,8 +42,8 @@ class FaceDetectCameraManager: NSObject, AVCaptureVideoDataOutputSampleBufferDel
     
     private var currentAction: FaceAction?
     private var actionCompleted = false
-    private var completedActions = 0
-    private let requiredAction = 3
+    var completedActions = 0
+    let requiredAction = 3
     
     private var currentStep = 1
     private var isFaceDetectionActive = false
@@ -412,14 +412,8 @@ extension FaceDetectCameraManager: AVCapturePhotoCaptureDelegate {
             return
         }
         
-        // Save photo to temporary file
-        let fileURL = saveImageToTemporaryFile(image: image)
-        
-        if let fileURL = fileURL {
-            delegate?.onSuccessUpload("Photo capture succeed")
-        } else {
-            delegate?.onFailUpload("Photo capture failed")
-        }
+        // Pass the image to the delegate
+        delegate?.onSuccessUpload("Photo capture succeed", image: image)
     }
     
     private func saveImageToTemporaryFile(image: UIImage) -> URL? {
